@@ -4,7 +4,7 @@ year of the bachelor Data Science and AI at Maastricht Univeristy.
 
 The theme of the project was unanmiously choosen by the group. 
 We decided to choose insurance pricing and we also wanted to improve our project by adding explainable AI elements.
-This project will try to dwelve deep into how isurancce pricing companies decide their costs and how an explainable model could help the user to better understand how certain desicions are made but also maybe help out the isurer to better undestand where their money come from. 
+This project will try to delve deep into how isurancce pricing companies decide their costs and how an explainable model could help the user to better understand how certain desicions are made but also maybe help out the insurer to better undestand where their money come from. 
 
 #|How to run the project/
     Navigate the files on the left and then run the main.py file.
