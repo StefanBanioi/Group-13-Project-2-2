@@ -6,66 +6,48 @@ class Frontend:
     def __init__(self, adapter: Adapter):
         self.adapter = adapter
         self.root = tk.Tk()
-        self.root.geometry("500x500")
-        self.root.title("Insurance Price Calculator")
-        #Enter your age
-        self.label = tk.Label(self.root, text="Enter your age:")
-        self.label.grid(row=0, column=0)
-        self.entry = tk.Entry(self.root)
-        self.entry.grid(row=0, column=1)
-        #Enter your diabetes status
-        self.label1 = tk.Label(self.root, text="Enter your diabetes status: (Yes/No)")
-        self.label1.grid(row=1, column=0)
-        self.entry1 = tk.Entry(self.root)
-        self.entry1.grid(row=1, column=1)
-        #Enter your blood pressure problems
-        self.label2 = tk.Label(self.root, text="Enter your blood pressure problems:")
-        self.label2.grid(row=2, column=0)
-        self.entry2 = tk.Entry(self.root)
-        self.entry2.grid(row=2, column=1)
-        #Enter if you had any transplants
-        self.label3 = tk.Label(self.root, text="Enter if you had any transplants:")
-        self.label3.grid(row=3, column=0)
-        self.entry3 = tk.Entry(self.root)
-        self.entry3.grid(row=3, column=1)
-        #Enter if you had any chronic diseases
-        self.label4 = tk.Label(self.root, text="Enter if you had any chronic diseases:")
-        self.label4.grid(row=4, column=0)
-        self.entry4 = tk.Entry(self.root)   
-        self.entry4.grid(row=4, column=1)
-        #Enter your height in cm
-        self.label5 = tk.Label(self.root, text="Enter your height in cm:")
-        self.label5.grid(row=5, column=0)
-        self.entry5 = tk.Entry(self.root)
-        self.entry5.grid(row=5, column=1)
-        #Enter your weight in kg
-        self.label6 = tk.Label(self.root, text="Enter your weight in kg:")
-        self.label6.grid(row=6, column=0)
-        self.entry6 = tk.Entry(self.root)
-        self.entry6.grid(row=6, column=1)
-        #Enter known allergies
-        self.label7 = tk.Label(self.root, text="Enter known allergies:")
-        self.label7.grid(row=7, column=0)
-        self.entry7 = tk.Entry(self.root)
-        self.entry7.grid(row=7, column=1)
-        #Enter History of Cancer In Family(Yes/No)
-        self.label8 = tk.Label(self.root, text="Enter History of Cancer In Family(Yes/No):")
-        self.label8.grid(row=8, column=0)
-        self.entry8 = tk.Entry(self.root)
-        self.entry8.grid(row=8, column=1)
-        #Enter if you had any major surgeries
-        self.label9 = tk.Label(self.root, text="Enter if you had any major surgeries:")
-        self.label9.grid(row=9, column=0)
-        self.entry9 = tk.Entry(self.root)
-        self.entry9.grid(row=9, column=1)
+        self.root.geometry("600x600")  # Increased window size
+        self.root.title("Predicting Insurance Premium for Individuals (One Year)")
 
-        self.button = tk.Button(self.root, text="Send", command=self.send_data)
-        self.button.grid(row=12, column=0)
+        # Title Label with increased font size
+        self.title_label = tk.Label(self.root, text="Predicting Insurance Premium for Individuals (One Year)", font=("Helvetica", 16, "bold"))
+        self.title_label.grid(row=0, columnspan=2, padx=15, pady=10)
 
-        self.calc_button = tk.Button(self.root, text="Calculate", command=self.calculate_data)
-        self.button.grid(row=13, column=0)
-        self.calc_button.grid(row=13, column=1)
-        self.result_label = tk.Label(self.root, text="Result: ")
+        # Creating frames for better organization
+        self.frame_labels = tk.Frame(self.root)
+        self.frame_labels.grid(row=1, column=0, padx=15, pady=10)
+
+        self.frame_entries = tk.Frame(self.root)
+        self.frame_entries.grid(row=1, column=1, padx=15, pady=10)
+
+        # Labels with increased font size
+        labels = [
+            "Age:", "Diabetes (Yes/No):", "Blood Pressure Problems (Yes/No):",
+            "Any Transplants (Yes/No):", "Chronic Diseases (Yes/No):",
+            "Height (cm):", "Weight (kg):", "Known Allergies (Yes/No):",
+            "History of Cancer in Family (Yes/No):", "Major Surgeries (Yes/No):"
+        ]
+
+        for i, text in enumerate(labels):
+            label = tk.Label(self.frame_labels, text=text, font=("Helvetica", 12))
+            label.grid(row=i, column=0, sticky="w", pady=5)
+
+        # Entries with increased size
+        self.entries = []
+        for i in range(len(labels)):
+            entry = tk.Entry(self.frame_entries, width=20, font=("Helvetica", 12))
+            entry.grid(row=i, column=0, pady=5)
+            self.entries.append(entry)
+
+        #self.button_send = tk.Button(self.root, text="Send", command=self.send_data, font=("Helvetica", 15))
+        #self.button_send.grid(row=2, column=0, pady=10)
+
+        self.button_calc = tk.Button(self.root, text="Calculate", command=self.calculate_data, font=("Helvetica", 15))
+        self.button_calc.grid(row=2, columnspan=2, pady=15)
+
+        # Result Text Widget with increased font size
+        self.result_text = tk.Text(self.root, height=2, width=30, font=("Helvetica", 12), state="disabled")
+        self.result_text.grid(row=3, columnspan=2, pady=10)
 
 
 
