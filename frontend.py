@@ -39,8 +39,8 @@ class Frontend:
             entry.grid(row=i, column=0, pady=5)
             self.entries.append(entry)
 
-        #self.button_send = tk.Button(self.root, text="Send", command=self.send_data, font=("Helvetica", 15))
-        #self.button_send.grid(row=2, column=0, pady=10)
+        self.button_send = tk.Button(self.root, text="Send", command=self.send_data, font=("Helvetica", 15))
+        self.button_send.grid(row=2, column=0, pady=10)
 
         self.button_calc = tk.Button(self.root, text="Calculate", command=self.calculate_data, font=("Helvetica", 15))
         self.button_calc.grid(row=2, columnspan=2, pady=15)
@@ -54,16 +54,16 @@ class Frontend:
     def send_data(self):
         # Get the data from the entry widget and send it to the adapter
 
-        age = self.entry.get()
-        diabetes = self.entry1.get()
-        blood_pressure = self.entry2.get()
-        any_transplants = self.entry3.get()
-        chronic_diseases = self.entry4.get()
-        height = self.entry5.get()
-        weight = self.entry6.get()
-        known_allergies = self.entry7.get()
-        history_of_cancer = self.entry8.get()
-        major_surgeries = self.entry9.get()
+        age = self.entries[0].get()
+        diabetes = self.entries[1].get()
+        blood_pressure = self.entries[2].get()
+        any_transplants = self.entries[3].get()
+        chronic_diseases = self.entries[4].get()
+        height = self.entries[5].get()
+        weight = self.entries[6].get()
+        known_allergies = self.entries[7].get()
+        history_of_cancer = self.entries[8].get()
+        major_surgeries = self.entries[9].get()
 
         response = self.adapter.request(age, diabetes, blood_pressure, any_transplants, chronic_diseases, height, weight, known_allergies, history_of_cancer, major_surgeries)
         print(response)
