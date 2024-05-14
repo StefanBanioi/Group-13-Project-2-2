@@ -48,6 +48,7 @@ class Frontend:
         # Result Text Widget with increased font size
         self.result_text = tk.Text(self.root, height=2, width=30, font=("Helvetica", 12), state="disabled")
         self.result_text.grid(row=3, columnspan=2, pady=10)
+        
 
 
 
@@ -69,11 +70,22 @@ class Frontend:
         print(response)
 
     def calculate_data(self):
-        data = self.entry.get()
-        self.entry2 = tk.Entry(self.root)
-        self.entry2.pack()
-        result = self.adapter.perform_calculation(data)
-        self.result_label.config(text=f"Result: {result}")
+
+        result = self.adapter.calculate_data([1, 1, 1, 1, 1, 170, 70, 1, 1, 1])
+                
+        # Clear the text box
+        self.result_text.config(state="normal")
+        self.result_text.delete('1.0', tk.END)
+
+
+        # Insert the new value
+        self.result_text.insert(tk.END, str(result))
+
+         # Disable the text box so it's read-only
+        self.result_text.config(state="disabled")
+        print('test')
+        
+        return result
 
     def run(self):
         self.root.mainloop()

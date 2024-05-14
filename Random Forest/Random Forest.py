@@ -14,7 +14,7 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 
 # Load the CSV file into a DataFrame
-mydata = pd.read_csv('Medicalpremium.csv')
+mydata = pd.read_csv('Random Forest\Medicalpremium.csv')
 mydata.describe()
 
 
@@ -43,7 +43,9 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, explained_v
 import numpy as np 
 import matplotlib.pyplot as plt
 
-# Splitting the dataset
+# Splitting the dataset using a random seed value (69)
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=69)
+
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.34)
 
 # Initialize the MinMaxScaler
