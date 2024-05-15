@@ -1,24 +1,24 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[12]:
 
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
 
-# In[2]:
+# In[13]:
 
 
 import pandas as pd
 
 # Load the CSV file into a DataFrame
-mydata = pd.read_csv('Random Forest\Medicalpremium.csv')
+mydata = pd.read_csv('Medicalpremium.csv')
 mydata.describe()
 
 
-# In[3]:
+# In[14]:
 
 
 # The input features and output features
@@ -27,25 +27,24 @@ y = mydata['PremiumPrice']
 X.shape
 
 
-# In[4]:
+# In[15]:
 
 
 print(X[:10])
 
 
-# In[5]:
+# In[18]:
 
 
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, RandomizedSearchCV
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, explained_variance_score, r2_score
 import numpy as np 
 import matplotlib.pyplot as plt
 
-# Splitting the dataset using a random seed value (69)
-X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=69)
 
+# Splitting the dataset
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.34)
 
 # Initialize the MinMaxScaler
@@ -57,26 +56,45 @@ X_train_scaled = scaler.fit_transform(X_train)
 # Transform the test data using the same scaler
 X_test_scaled = scaler.fit_transform(X_test)
 
-print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
+param_dist = {'bootstrap': [True, False],
+ 'max_depth': [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, None],
+ 'min_samples_leaf': [1, 2, 4],
+ 'min_samples_split': [2, 5, 10],
+ 'n_estimators': [200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000]}
 
 # Instantiation of the model
-model = RandomForestRegressor(n_estimators=10, max_depth=10, min_samples_split=5, min_samples_leaf=2, random_state=20)
+rand_search = RandomizedSearchCV(
+    RandomForestRegressor(random_state=20),
+    param_distributions=param_dist,
+    n_iter=100,  # Set the number of iterations to 1
+    cv=5
+)
+rand_search.fit(X_train_scaled, y_train)
 
-# Fitting the model
-PP_rf = model.fit(X_train_scaled, y_train)
+best_params = rand_search.best_params_
+print("Best Parameters:", best_params)
+
+# Predictions using the best model
+best_model = rand_search.best_estimator_
+y_pred = best_model.predict(X_test_scaled)
+
+
+
+# In[19]:
+
 
 # The training r_sq
-print('The training rsq is: %.2f'% PP_rf.score(X_train_scaled, y_train))
+print('The training rsq is: %.2f'% rand_search.score(X_train_scaled, y_train))
 
 # Prediction on the training dataset
-ytrain_pred = PP_rf.predict(X_train_scaled)
+ytrain_pred = rand_search.predict(X_train_scaled)
 print('The MAE is: %.2f'% mean_absolute_error(y_train, ytrain_pred))
 print('The MSE is: %.2f'% mean_squared_error(y_train, ytrain_pred))
 
 print('The RMSE is: %.2f'% np.sqrt(mean_squared_error(y_train, ytrain_pred)))
 
 # Prediction on the testing data
-ytest_pred = PP_rf.predict(X_test_scaled)
+ytest_pred = rand_search.predict(X_test_scaled)
 
 print('The MAE is: %.2f'% mean_absolute_error(y_test, ytest_pred))
 print('The MSE is: %.2f'% mean_squared_error(y_test, ytest_pred))
@@ -99,7 +117,7 @@ plt.grid(True)
 plt.show()
 
 
-# In[6]:
+# In[20]:
 
 
 # Calculate residuals
@@ -117,4 +135,10 @@ plt.title('Residual Plot')
 plt.legend()
 plt.grid(True)
 plt.show()
+
+
+# In[ ]:
+
+
+
 
