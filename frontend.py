@@ -68,10 +68,11 @@ class Frontend:
 
         response = self.adapter.request(age, diabetes, blood_pressure, any_transplants, chronic_diseases, height, weight, known_allergies, history_of_cancer, major_surgeries)
         print(response)
+        return response
 
     def calculate_data(self):
 
-        result = self.adapter.calculate_data([1, 1, 1, 1, 1, 170, 70, 1, 1, 1])
+        result = self.adapter.calculate_data(self.send_data())
                 
         # Clear the text box
         self.result_text.config(state="normal")

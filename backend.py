@@ -1,5 +1,6 @@
 # Backend class
 import random
+from Random_Forest import Random_forest as rf  
 
 
 class Backend:
@@ -49,9 +50,18 @@ class Backend:
        
     # Calculate the insurance premium using the Random Forest model
     def calculate_premium(self, data):
-        #result = self.model.predict([data])
+
+        # To do: Use the Random Forest model to calculate the premium
+        #        Make that the Random Forest generated 5 aproximations and then takes the average as the result of the premium and this gets returned
+        #        We do this since each time RF is runned, a different result is generated so we take an average of 5 results to get a more accurate result
+    
+        result = rf.predict_premium(data)
+        print('test2')
+         
+        
+        
         # Result is going to be a random number for now
         # Random number is generated for testing purposes
-        result = random.randint(0, 10000)
+        # result = random.randint(100, 1000)
 
         return result
