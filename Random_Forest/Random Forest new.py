@@ -14,7 +14,7 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 
 # Load the CSV file into a DataFrame
-mydata = pd.read_csv('healthinsurance2cleaned.csv')
+mydata = pd.read_csv('Random_Forest\healthinsurance2.csv')
 mydata.describe()
 
 
