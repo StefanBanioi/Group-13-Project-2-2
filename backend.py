@@ -1,6 +1,7 @@
 # Backend class
 import random
-from Random_Forest import Random_forest as rf  
+from Random_Forest import Random_Forest_new as rf #new dataset
+#from Random_Forest import Random_Forest as rf    #old dataset
 
 
 class Backend:
@@ -38,6 +39,11 @@ class Backend:
         blood_pressure = 1 if blood_pressure.lower() == 'yes' else 0
         diabetes = 1 if diabetes.lower() == 'yes' else 0
         regular_exercise = 1 if regular_exercise.lower() == 'yes' else 0
+        age = int(age)
+        weight = int(weight)
+        bmi = int(bmi)
+        no_of_dependents = int(no_of_dependents)
+        
         '''
         Arthritis = 1
         Alzheimer = 2
