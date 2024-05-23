@@ -1,0 +1,140 @@
+Root Mean Squared Error: 208803.05
+R-squared value: -1074.59
+Training Parameters: {'C': 10, 'cache_size': 200, 'coef0': 1, 'degree': 10, 'epsilon': 0.01, 'gamma': 'auto', 'kernel': 'poly', 'max_iter': 990000, 'shrinking': True, 'tol': 0.1, 'verbose': False}
+Root Mean Squared Error: 208803.05
+R-squared value: -1074.59
+Training Parameters: {'C': 10, 'cache_size': 200, 'coef0': 1, 'degree': 10, 'epsilon': 50, 'gamma': 'auto', 'kernel': 'poly', 'max_iter': 990000, 'shrinking': True, 'tol': 100, 'verbose': False}
+Root Mean Squared Error: 173074.13
+R-squared value: -737.99
+=============================================
+Training Parameters: {'C': 10, 'cache_size': 200, 'coef0': 1, 'degree': 5, 'epsilon': 50, 'gamma': 'auto', 'kernel': 'poly', 'max_iter': 990000, 'shrinking': True, 'tol': 100, 'verbose': False}
+Root Mean Squared Error: 2857127.35
+R-squared value: -201386.55
+=============================================
+Training Parameters: {'C': 10, 'cache_size': 200, 'coef0': 1, 'degree': 5, 'epsilon': 50, 'gamma': 'auto', 'kernel': 'poly', 'max_iter': 9990000, 'shrinking': True, 'tol': 100, 'verbose': False}
+Root Mean Squared Error: 5996942539919.62
+R-squared value: -887223811466549248.00
+=============================================
+=============================================
+Training Parameters: {'C': 10, 'cache_size': 200, 'coef0': 1, 'degree': 5, 'epsilon': 50, 'gamma': 'auto', 'kernel': 'rbf', 'max_iter': 9990000, 'shrinking': True, 'tol': 100, 'verbose': False}
+Root Mean Squared Error: 6672.14
+R-squared value: -0.10
+=============================================
+=============================================
+Training Parameters: {'C': 10, 'cache_size': 200, 'coef0': 1, 'degree': 20, 'epsilon': 50, 'gamma': 'auto', 'kernel': 'poly', 'max_iter': 9990000, 'shrinking': True, 'tol': 100, 'verbose': False}
+========================== StandardScaler ==========
+Training Parameters: {'C': 10, 'cache_size': 200, 'coef0': 1, 'degree': 20, 'epsilon': 50, 'gamma': 'auto', 'kernel': 'poly', 'max_iter': 9990000, 'shrinking': True, 'tol': 100, 'verbose': False}
+========================== StandardScaler ==========
+Training Parameters: {'memory': None, 'steps': [('standardscaler', StandardScaler()), ('svr', SVR(C=10, coef0=1, degree=20, epsilon=50, gamma='auto', kernel='poly',
+    max_iter=9990000, tol=100))], 'verbose': False, 'standardscaler': StandardScaler(), 'svr': SVR(C=10, coef0=1, degree=20, epsilon=50, gamma='auto', kernel='poly',
+    max_iter=9990000, tol=100), 'standardscaler__copy': True, 'standardscaler__with_mean': True, 'standardscaler__with_std': True, 'svr__C': 10, 'svr__cache_size': 200, 'svr__coef0': 1, 'svr__degree': 20, 'svr__epsilon': 50, 'svr__gamma': 'auto', 'svr__kernel': 'poly', 'svr__max_iter': 9990000, 'svr__shrinking': True, 'svr__tol': 100, 'svr__verbose': False}
+Root Mean Squared Error: 85740.15
+R-squared value: -180.36
+=============================================
+========================== StandardScaler ==========
+Training Parameters: {'memory': None, 'steps': [('standardscaler', StandardScaler()), ('svr', SVR())], 'verbose': False, 'standardscaler': StandardScaler(), 'svr': SVR(), 'standardscaler__copy': True, 'standardscaler__with_mean': True, 'standardscaler__with_std': True, 'svr__C': 1.0, 'svr__cache_size': 200, 'svr__coef0': 0.0, 'svr__degree': 3, 'svr__epsilon': 0.1, 'svr__gamma': 'scale', 'svr__kernel': 'rbf', 'svr__max_iter': -1, 'svr__shrinking': True, 'svr__tol': 0.001, 'svr__verbose': False}
+Root Mean Squared Error: 6663.19
+R-squared value: -0.10
+=============================================
+========================== StandardScaler ==========
+Training Parameters: {'memory': None, 'steps': [('standardscaler', StandardScaler()), ('svr', SVR(degree=6, kernel='poly'))], 'verbose': False, 'standardscaler': StandardScaler(), 'svr': SVR(degree=6, kernel='poly'), 'standardscaler__copy': True, 'standardscaler__with_mean': True, 'standardscaler__with_std': True, 'svr__C': 1.0, 'svr__cache_size': 200, 'svr__coef0': 0.0, 'svr__degree': 6, 'svr__epsilon': 0.1, 'svr__gamma': 'scale', 'svr__kernel': 'poly', 'svr__max_iter': -1, 'svr__shrinking': True, 'svr__tol': 0.001, 'svr__verbose': False}
+Root Mean Squared Error: 6432.02
+R-squared value: -0.02
+=============================================
+========================== StandardScaler ==========
+Training Parameters: {'memory': None, 'steps': [('standardscaler', StandardScaler()), ('svr', SVR(degree=10, kernel='poly'))], 'verbose': False, 'standardscaler': StandardScaler(), 'svr': SVR(degree=10, kernel='poly'), 'standardscaler__copy': True, 'standardscaler__with_mean': True, 'standardscaler__with_std': True, 'svr__C': 1.0, 'svr__cache_size': 200, 'svr__coef0': 0.0, 'svr__degree': 10, 'svr__epsilon': 0.1, 'svr__gamma': 'scale', 'svr__kernel': 'poly', 'svr__max_iter': -1, 'svr__shrinking': True, 'svr__tol': 0.001, 'svr__verbose': False}
+Root Mean Squared Error: 5934.12
+R-squared value: 0.13
+=============================================
+========================== StandardScaler ==========
+Training size: 739
+Training Parameters: {'memory': None, 'steps': [('standardscaler', StandardScaler()), ('svr', SVR(degree=10, kernel='poly'))], 'verbose': False, 'standardscaler': StandardScaler(), 'svr': SVR(degree=10, kernel='poly'), 'standardscaler__copy': True, 'standardscaler__with_mean': True, 'standardscaler__with_std': True, 'svr__C': 1.0, 'svr__cache_size': 200, 'svr__coef0': 0.0, 'svr__degree': 10, 'svr__epsilon': 0.1, 'svr__gamma': 'scale', 'svr__kernel': 'poly', 'svr__max_iter': -1, 'svr__shrinking': True, 'svr__tol': 0.001, 'svr__verbose': False}
+Root Mean Squared Error: 5934.12
+R-squared value: 0.13
+=============================================
+========================== StandardScaler ==========
+Training size: 739
+Training Parameters: {'memory': None, 'steps': [('standardscaler', StandardScaler()), ('svr', SVR(degree=10, kernel='poly'))], 'verbose': False, 'standardscaler': StandardScaler(), 'svr': SVR(degree=10, kernel='poly'), 'standardscaler__copy': True, 'standardscaler__with_mean': True, 'standardscaler__with_std': True, 'svr__C': 1.0, 'svr__cache_size': 200, 'svr__coef0': 0.0, 'svr__degree': 10, 'svr__epsilon': 0.1, 'svr__gamma': 'scale', 'svr__kernel': 'poly', 'svr__max_iter': -1, 'svr__shrinking': True, 'svr__tol': 0.001, 'svr__verbose': False}
+Root Mean Squared Error: 5934.12
+R-squared value: 0.13
+=============================================
+========================== StandardScaler ==========
+Training size: 739
+Training Parameters: {'memory': None, 'steps': [('standardscaler', StandardScaler()), ('svr', SVR(degree=15, kernel='poly'))], 'verbose': False, 'standardscaler': StandardScaler(), 'svr': SVR(degree=15, kernel='poly'), 'standardscaler__copy': True, 'standardscaler__with_mean': True, 'standardscaler__with_std': True, 'svr__C': 1.0, 'svr__cache_size': 200, 'svr__coef0': 0.0, 'svr__degree': 15, 'svr__epsilon': 0.1, 'svr__gamma': 'scale', 'svr__kernel': 'poly', 'svr__max_iter': -1, 'svr__shrinking': True, 'svr__tol': 0.001, 'svr__verbose': False}
+Root Mean Squared Error: 6063.53
+R-squared value: 0.09
+=============================================
+========================== StandardScaler ==========
+Training size: 739
+Training Parameters: {'memory': None, 'steps': [('standardscaler', StandardScaler()), ('svr', SVR(degree=15, kernel='poly'))], 'verbose': False, 'standardscaler': StandardScaler(), 'svr': SVR(degree=15, kernel='poly'), 'standardscaler__copy': True, 'standardscaler__with_mean': True, 'standardscaler__with_std': True, 'svr__C': 1.0, 'svr__cache_size': 200, 'svr__coef0': 0.0, 'svr__degree': 15, 'svr__epsilon': 0.1, 'svr__gamma': 'scale', 'svr__kernel': 'poly', 'svr__max_iter': -1, 'svr__shrinking': True, 'svr__tol': 0.001, 'svr__verbose': False}
+Root Mean Squared Error: 6063.53
+R-squared value: 0.09
+=============================================
+========================== StandardScaler ==========
+Training size: 739
+Training Parameters: {'memory': None, 'steps': [('standardscaler', StandardScaler()), ('svr', SVR(degree=15, kernel='poly'))], 'verbose': False, 'standardscaler': StandardScaler(), 'svr': SVR(degree=15, kernel='poly'), 'standardscaler__copy': True, 'standardscaler__with_mean': True, 'standardscaler__with_std': True, 'svr__C': 1.0, 'svr__cache_size': 200, 'svr__coef0': 0.0, 'svr__degree': 15, 'svr__epsilon': 0.1, 'svr__gamma': 'scale', 'svr__kernel': 'poly', 'svr__max_iter': -1, 'svr__shrinking': True, 'svr__tol': 0.001, 'svr__verbose': False}
+Root Mean Squared Error: 6063.53
+mean_absolute_erro: 4585.43
+=============================================
+========================== StandardScaler ==========
+Training size: 739
+Training Parameters: {'memory': None, 'steps': [('standardscaler', StandardScaler()), ('svr', SVR(degree=15, kernel='poly'))], 'verbose': False, 'standardscaler': StandardScaler(), 'svr': SVR(degree=15, kernel='poly'), 'standardscaler__copy': True, 'standardscaler__with_mean': True, 'standardscaler__with_std': True, 'svr__C': 1.0, 'svr__cache_size': 200, 'svr__coef0': 0.0, 'svr__degree': 15, 'svr__epsilon': 0.1, 'svr__gamma': 'scale', 'svr__kernel': 'poly', 'svr__max_iter': -1, 'svr__shrinking': True, 'svr__tol': 0.001, 'svr__verbose': False}
+Root Mean Squared Error: 6063.53
+mean_absolute_erro: 4585.43
+=============================================
+========================== StandardScaler ==========
+Training size: 739
+Training Parameters: {'memory': None, 'steps': [('standardscaler', StandardScaler()), ('svr', SVR(degree=15, kernel='poly'))], 'verbose': False, 'standardscaler': StandardScaler(), 'svr': SVR(degree=15, kernel='poly'), 'standardscaler__copy': True, 'standardscaler__with_mean': True, 'standardscaler__with_std': True, 'svr__C': 1.0, 'svr__cache_size': 200, 'svr__coef0': 0.0, 'svr__degree': 15, 'svr__epsilon': 0.1, 'svr__gamma': 'scale', 'svr__kernel': 'poly', 'svr__max_iter': -1, 'svr__shrinking': True, 'svr__tol': 0.001, 'svr__verbose': False}
+Root Mean Squared Error: 6063.53
+mean_absolute_erro: 4585.43
+   Age  Diabetes  BloodPressureProblems  AnyTransplants  AnyChronicDiseases  \
+0   21         0                      0               0                   0   
+
+   Height  Weight  KnownAllergies  HistoryOfCancerInFamily  \
+0     158      75               1                        0   
+
+   NumberOfMajorSurgeries  
+0                       1  
+=============================================
+========================== StandardScaler ==========
+Training size: 739
+Training Parameters: {'memory': None, 'steps': [('standardscaler', StandardScaler()), ('svr', SVR(degree=15, kernel='poly'))], 'verbose': False, 'standardscaler': StandardScaler(), 'svr': SVR(degree=15, kernel='poly'), 'standardscaler__copy': True, 'standardscaler__with_mean': True, 'standardscaler__with_std': True, 'svr__C': 1.0, 'svr__cache_size': 200, 'svr__coef0': 0.0, 'svr__degree': 15, 'svr__epsilon': 0.1, 'svr__gamma': 'scale', 'svr__kernel': 'poly', 'svr__max_iter': -1, 'svr__shrinking': True, 'svr__tol': 0.001, 'svr__verbose': False}
+Root Mean Squared Error: 6063.53
+mean_absolute_erro: 4585.43
+   Age  Diabetes  BloodPressureProblems  AnyTransplants  AnyChronicDiseases  \
+0   21         0                      0               0                   0   
+
+   Height  Weight  KnownAllergies  HistoryOfCancerInFamily  \
+0     158      75               1                        0   
+
+   NumberOfMajorSurgeries  
+0                       1  
+=============================================
+========================== StandardScaler ==========
+Training size: 739
+Training Parameters: {'memory': None, 'steps': [('standardscaler', StandardScaler()), ('svr', SVR(degree=15, kernel='poly'))], 'verbose': False, 'standardscaler': StandardScaler(), 'svr': SVR(degree=15, kernel='poly'), 'standardscaler__copy': True, 'standardscaler__with_mean': True, 'standardscaler__with_std': True, 'svr__C': 1.0, 'svr__cache_size': 200, 'svr__coef0': 0.0, 'svr__degree': 15, 'svr__epsilon': 0.1, 'svr__gamma': 'scale', 'svr__kernel': 'poly', 'svr__max_iter': -1, 'svr__shrinking': True, 'svr__tol': 0.001, 'svr__verbose': False}
+Root Mean Squared Error: 6063.53
+mean_absolute_erro: 4585.43
+   Age  Diabetes  BloodPressureProblems  AnyTransplants  AnyChronicDiseases  \
+0   21         0                      0               0                   0   
+
+   Height  Weight  KnownAllergies  HistoryOfCancerInFamily  \
+0     158      75               1                        0   
+
+   NumberOfMajorSurgeries  
+0                       1  
+=============================================
+========================== StandardScaler ==========
+Training size: 739
+Training Parameters: {'memory': None, 'steps': [('standardscaler', StandardScaler()), ('svr', SVR(degree=15, kernel='poly'))], 'verbose': False, 'standardscaler': StandardScaler(), 'svr': SVR(degree=15, kernel='poly'), 'standardscaler__copy': True, 'standardscaler__with_mean': True, 'standardscaler__with_std': True, 'svr__C': 1.0, 'svr__cache_size': 200, 'svr__coef0': 0.0, 'svr__degree': 15, 'svr__epsilon': 0.1, 'svr__gamma': 'scale', 'svr__kernel': 'poly', 'svr__max_iter': -1, 'svr__shrinking': True, 'svr__tol': 0.001, 'svr__verbose': False}
+Root Mean Squared Error: 6063.53
+mean_absolute_erro: 4585.43
+   Age  Diabetes  BloodPressureProblems  AnyTransplants  AnyChronicDiseases  \
+0   21         0                      0               0                   0   
+
+   Height  Weight  KnownAllergies  HistoryOfCancerInFamily  \
+0     158      75               1                        0   
+
+   NumberOfMajorSurgeries  
+0                       1  
+=============================================

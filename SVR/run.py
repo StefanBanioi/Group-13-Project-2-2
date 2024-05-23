@@ -78,6 +78,7 @@ def main():
     df = pd.read_csv("Data\dataset (2).csv")
     # drop mising values
     df = df.dropna()
+    #=========experiment=================#
     comment = input("Please enter a comment to add to the log: ")
     logging.info(f"User comment : {comment}")
     le = LabelEncoder()
@@ -85,7 +86,7 @@ def main():
     #df = df.drop('city',axis=1)
     df = df.drop('job_title',axis=1)
     #df= df.drop('hereditary_diseases',axis=1)
-
+    #=========================#
     X=df.drop('claim',axis=1)
     y=df['claim']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=69)
