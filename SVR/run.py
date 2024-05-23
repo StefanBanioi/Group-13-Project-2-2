@@ -1,13 +1,3 @@
-from sklearn.preprocessing import StandardScaler
-
-def predict(user_input, model):
-    scaler = StandardScaler()
-    user_input_scaled = scaler.fit_transform(np.array(user_input).reshape(-1, 1))
-    prediction = model.predict(user_input_scaled)
-    return prediction
-
-
-
 import argparse
 import numpy as np
 import json
@@ -73,7 +63,7 @@ def parse_arguments():
     parser.add_argument('--use_grid_search', type=int, default=False, help='Use Grid Search')
     param_grid = {
         'm__C': [1, 10, 100],
-        'm__epsilon': [ 1,10,100],
+        'm__epsilon': [ 10,100],
         'm__kernel': ['linear', 'poly', 'rbf', 'sigmoid'],
         'm__degree': [2, 3, 4],
         'm__gamma': ['scale', 'auto']
@@ -84,10 +74,11 @@ def parse_arguments():
 def main():
     args = parse_arguments()
     param_grid = args.param_grid
-    df = pd.read_csv('dataset.csv')
+    df = pd.read_csv('Data\dataset.csv')
     # drop mising values
     df = df.dropna()
     df = df.drop('city',axis=1)
+    df = df.drop('job_title',axis=1)
     X=df.drop('claim',axis=1)
     y=df['claim']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=69)
