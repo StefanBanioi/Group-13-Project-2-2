@@ -1,0 +1,260 @@
+Current date and time: 2024-05-23 16:10:28
+Start time: 1716473428.4047492
+This is a log message.
+Calling function main with args () and kwargs {}
+Not using RFE or Grid Search
+SVR Model: {'C': 1.0, 'cache_size': 200, 'coef0': 0.0, 'degree': 3, 'epsilon': 0.1, 'gamma': 'scale', 'kernel': 'rbf', 'max_iter': -1, 'shrinking': True, 'tol': 0.001, 'verbose': False}
+Train Score: -0.06039688083758432
+Test Score: -0.05988295003655164
+matrix summary: {'MAE': 8104.2713002377695, 'MSE': 157207154.24616587, 'RMSE': 12538.227715517289, 'MAPE': 95.50645399752742}
+End time: 1716473474.5849645
+Elapsed time: 46.18021535873413
+Finished
+---------------------------------------------------
+Current date and time: 2024-05-23 16:14:37
+Start time: 1716473677.244203
+This is a log message.
+Calling function main with args () and kwargs {}
+Using Grid Search
+Current date and time: 2024-05-23 16:15:39
+Start time: 1716473739.2439487
+This is a log message.
+Calling function main with args () and kwargs {}
+Using Grid Search
+Best Parameters: {'kernel': 'linear', 'gamma': 'scale', 'epsilon': 100, 'degree': 4, 'C': 10}
+Train Score: -45821110.537658654
+Test Score: -45851087.220236965
+matrix summary: {'MAE': 3283.8579324641873, 'MSE': 45851087.220236965, 'RMSE': 6771.343088356767, 'MAPE': 18.59450171767783}
+End time: 1716474094.8068466
+Elapsed time: 355.5628979206085
+Finished
+---------------------------------------------------
+Current date and time: 2024-05-23 16:21:39
+Start time: 1716474099.757487
+This is a log message.
+Calling function main with args () and kwargs {}
+Using Grid Search
+Current date and time: 2024-05-23 16:23:02
+Start time: 1716474182.392509
+This is a log message.
+Calling function main with args () and kwargs {}
+Using Grid Search
+Best Parameters: {'kernel': 'linear', 'gamma': 'auto', 'epsilon': 10, 'degree': 3, 'C': 100}
+Train Score: -44356166.42994473
+Test Score: -44380723.23462385
+matrix summary: {'MAE': 3278.6169340017186, 'MSE': 44380723.23462385, 'RMSE': 6661.885861722929, 'MAPE': 18.889841974093756}
+End time: 1716474511.7108946
+Elapsed time: 329.3183856010437
+Finished
+---------------------------------------------------
+Current date and time: 2024-05-23 16:34:38
+Start time: 1716474878.306786
+This is a log message.
+Calling function main with args () and kwargs {}
+Using Grid Search
+Best Parameters: {'kernel': 'linear', 'gamma': 'scale', 'epsilon': 100, 'degree': 4, 'C': 10}
+Train Score: -46025152.5832554
+Test Score: -45132688.02742194
+matrix summary: {'MAE': 3268.309588607479, 'MSE': 45132688.02742194, 'RMSE': 6718.0866344087835, 'MAPE': 18.524654353489684}
+End time: 1716475158.1568396
+Elapsed time: 279.85005354881287
+Finished
+---------------------------------------------------
+Current date and time: 2024-05-23 16:47:01
+Start time: 1716475621.6560612
+This is a log message.
+Calling function main with args () and kwargs {}
+Using Grid Search
+Best Parameters: {'kernel': 'linear', 'gamma': 'auto', 'epsilon': 10, 'degree': 4, 'C': 100}
+Train Score: -44440558.789966054
+Test Score: -43572467.88565431
+matrix summary: {'MAE': 3264.0102857498273, 'MSE': 43572467.88565431, 'RMSE': 6600.944469214562, 'MAPE': 18.855317809514546}
+End time: 1716475842.7976868
+Elapsed time: 221.1416256427765
+Finished
+---------------------------------------------------
+Current date and time: 2024-05-23 16:58:19
+Start time: 1716476299.4164944
+This is a log message.
+Calling function main with args () and kwargs {}
+Using RFE
+Using Grid Search
+Current date and time: 2024-05-23 17:00:30
+Start time: 1716476430.3915796
+This is a log message.
+Calling function main with args () and kwargs {}
+Using RFE
+Using Grid Search
+Current date and time: 2024-05-23 17:02:06
+Start time: 1716476526.1460416
+This is a log message.
+Calling function main with args () and kwargs {}
+Using Grid Search
+Best Parameters: {'kernel': 'sigmoid', 'gamma': 'scale', 'epsilon': 100, 'degree': 2, 'C': 100}
+Train Score: -59975461.7409073
+Test Score: -57760099.97249675
+matrix summary: {'MAE': 4569.847567213053, 'MSE': 57760099.97249675, 'RMSE': 7600.006577135098, 'MAPE': 41.766979317028756}
+End time: 1716476764.5353808
+Elapsed time: 238.3893392086029
+Finished
+---------------------------------------------------
+Current date and time: 2024-05-23 17:06:07
+Start time: 1716476767.2462852
+This is a log message.
+Calling function main with args () and kwargs {}
+Using Grid Search
+Best Parameters: {'kernel': 'linear', 'gamma': 'scale', 'epsilon': 100, 'degree': 4, 'C': 100}
+Train Score: -44448588.932303295
+Test Score: -43581868.21335
+matrix summary: {'MAE': 3264.259257573364, 'MSE': 43581868.21335, 'RMSE': 6601.65647495763, 'MAPE': 18.856132983242098}
+End time: 1716477002.568236
+Elapsed time: 235.3219509124756
+Finished
+---------------------------------------------------
+Current date and time: 2024-05-23 17:12:09
+Start time: 1716477129.8766472
+This is a log message.
+Calling function main with args () and kwargs {}
+Using Grid Search
+Best Parameters: {'kernel': 'linear', 'gamma': 'auto', 'epsilon': 100, 'degree': 4, 'C': 100}
+Train Score: -44448588.932303295
+Test Score: -43581868.21335
+matrix summary: {'MAE': 3264.259257573364, 'MSE': 43581868.21335, 'RMSE': 6601.65647495763, 'MAPE': 18.856132983242098}
+End time: 1716477382.042576
+Elapsed time: 252.1659288406372
+Finished
+---------------------------------------------------
+Current date and time: 2024-05-23 17:16:24
+Start time: 1716477384.8764563
+This is a log message.
+Calling function main with args () and kwargs {}
+Using Grid Search
+Best Parameters: {'kernel': 'linear', 'gamma': 'scale', 'epsilon': 100, 'degree': 2, 'C': 100}
+Train Score: -44448588.932303295
+Test Score: -43581868.21335
+matrix summary: {'MAE': 3264.259257573364, 'MSE': 43581868.21335, 'RMSE': 6601.65647495763, 'MAPE': 18.856132983242098}
+End time: 1716477595.341282
+Elapsed time: 210.464825630188
+Finished
+---------------------------------------------------
+Current date and time: 2024-05-23 19:07:27
+Start time: 1716484047.4107974
+This is a log message.
+Calling function main with args () and kwargs {}
+Current date and time: 2024-05-23 19:07:57
+Start time: 1716484077.6455863
+This is a log message.
+Calling function main with args () and kwargs {}
+Current date and time: 2024-05-23 19:08:16
+Start time: 1716484096.2036936
+This is a log message.
+Calling function main with args () and kwargs {}
+Current date and time: 2024-05-23 19:08:24
+Start time: 1716484104.2378376
+This is a log message.
+Calling function main with args () and kwargs {}
+Current date and time: 2024-05-23 19:08:48
+Start time: 1716484128.5753293
+This is a log message.
+Calling function main with args () and kwargs {}
+Current date and time: 2024-05-23 19:09:08
+Start time: 1716484148.1587527
+This is a log message.
+Calling function main with args () and kwargs {}
+Current date and time: 2024-05-23 19:09:32
+Start time: 1716484172.5970523
+This is a log message.
+Calling function main with args () and kwargs {}
+Using Grid Search
+Best Parameters: {'kernel': 'linear', 'gamma': 'auto', 'epsilon': 10, 'degree': 4, 'C': 100}
+Train Score: -44324658.1869174
+Test Score: -43481195.82819444
+matrix summary: {'MAE': 3259.935402001929, 'MSE': 43481195.82819444, 'RMSE': 6594.027284459356, 'MAPE': 18.73426807628044}
+End time: 1716484427.7632189
+Elapsed time: 255.16616654396057
+Finished
+---------------------------------------------------
+Current date and time: 2024-05-23 19:13:50
+Start time: 1716484430.5589626
+This is a log message.
+Calling function main with args () and kwargs {}
+Using Grid Search
+Best Parameters: {'kernel': 'linear', 'gamma': 'auto', 'epsilon': 10, 'degree': 3, 'C': 100}
+Train Score: -44324658.1869174
+Test Score: -43481195.82819444
+matrix summary: {'MAE': 3259.935402001929, 'MSE': 43481195.82819444, 'RMSE': 6594.027284459356, 'MAPE': 18.73426807628044}
+End time: 1716484676.480635
+Elapsed time: 245.92167234420776
+Finished
+---------------------------------------------------
+Current date and time: 2024-05-23 19:26:25
+Start time: 1716485185.8950834
+This is a log message.
+Calling function main with args () and kwargs {}
+User comment : droping city
+Current date and time: 2024-05-23 19:27:13
+Start time: 1716485233.480765
+This is a log message.
+Calling function main with args () and kwargs {}
+User comment : drop city 
+Using Grid Search
+Best Parameters: {'kernel': 'linear', 'gamma': 'auto', 'epsilon': 10, 'degree': 3, 'C': 100}
+Train Score: -44324658.1869174
+Test Score: -43481195.82819444
+matrix summary: {'MAE': 3259.935402001929, 'MSE': 43481195.82819444, 'RMSE': 6594.027284459356, 'MAPE': 18.73426807628044}
+End time: 1716485469.0985305
+Elapsed time: 235.61776542663574
+Finished
+---------------------------------------------------
+Current date and time: 2024-05-23 19:53:27
+Start time: 1716486807.7905803
+This is a log message.
+Calling function main with args () and kwargs {}
+User comment : hereditary_diseases drop
+Using Grid Search
+Best Parameters: {'kernel': 'linear', 'gamma': 'auto', 'epsilon': 10, 'degree': 3, 'C': 100}
+Train Score: -44440558.789966054
+Test Score: -43572467.88565431
+matrix summary: {'MAE': 3264.0102857498273, 'MSE': 43572467.88565431, 'RMSE': 6600.944469214562, 'MAPE': 18.855317809514546}
+End time: 1716487027.9972332
+Elapsed time: 220.20665287971497
+Finished
+---------------------------------------------------
+Current date and time: 2024-05-23 19:59:22
+Start time: 1716487162.852251
+This is a log message.
+Calling function main with args () and kwargs {}
+User comment : all 
+Using Grid Search
+Best Parameters: {'kernel': 'sigmoid', 'gamma': 'scale', 'epsilon': 100, 'degree': 3, 'C': 100}
+Train Score: -59975461.7409073
+Test Score: -57760099.97249675
+matrix summary: {'MAE': 4569.847567213053, 'MSE': 57760099.97249675, 'RMSE': 7600.006577135098, 'MAPE': 41.766979317028756}
+End time: 1716487429.3176374
+Elapsed time: 266.46538639068604
+Finished
+---------------------------------------------------
+Current date and time: 2024-05-23 20:18:32
+Start time: 1716488312.1272187
+This is a log message.
+Calling function main with args () and kwargs {}
+User comment : drop job title 
+Current date and time: 2024-05-23 20:19:10
+Start time: 1716488350.5564759
+This is a log message.
+Calling function main with args () and kwargs {}
+User comment : job drop
+Current date and time: 2024-05-23 20:19:41
+Start time: 1716488381.725088
+This is a log message.
+Calling function main with args () and kwargs {}
+User comment : job drop
+Using Grid Search
+Best Parameters: {'kernel': 'linear', 'gamma': 'scale', 'epsilon': 100, 'degree': 4, 'C': 100}
+Train Score: -44445506.88085323
+Test Score: -43578728.27587367
+matrix summary: {'MAE': 3264.286926627418, 'MSE': 43578728.27587367, 'RMSE': 6601.418656309693, 'MAPE': 18.857298943755435}
+End time: 1716488616.0972748
+Elapsed time: 234.37218689918518
+Finished
+---------------------------------------------------

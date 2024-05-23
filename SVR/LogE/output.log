@@ -1,0 +1,198 @@
+2024-05-23 16:10:28,405 - my_logger - INFO - This is a log message.
+2024-05-23 16:10:28,407 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 16:10:28,513 - my_logger - INFO - Not using RFE or Grid Search
+2024-05-23 16:10:28,513 - my_logger - INFO - SVR Model: {'C': 1.0, 'cache_size': 200, 'coef0': 0.0, 'degree': 3, 'epsilon': 0.1, 'gamma': 'scale', 'kernel': 'rbf', 'max_iter': -1, 'shrinking': True, 'tol': 0.001, 'verbose': False}
+2024-05-23 16:10:58,768 - my_logger - INFO - Train Score: -0.06039688083758432
+2024-05-23 16:11:07,646 - my_logger - INFO - Test Score: -0.05988295003655164
+2024-05-23 16:11:14,573 - my_logger - INFO - matrix summary: {'MAE': 8104.2713002377695, 'MSE': 157207154.24616587, 'RMSE': 12538.227715517289, 'MAPE': 95.50645399752742}
+2024-05-23 16:11:14,584 - my_logger - INFO - End time: 1716473474.5849645
+2024-05-23 16:11:14,585 - my_logger - INFO - Elapsed time: 46.18021535873413
+2024-05-23 16:11:14,585 - my_logger - INFO - Finished
+2024-05-23 16:11:14,586 - my_logger - INFO - ---------------------------------------------------
+2024-05-23 16:14:37,244 - my_logger - INFO - This is a log message.
+2024-05-23 16:14:37,244 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 16:14:37,326 - my_logger - INFO - Using Grid Search
+2024-05-23 16:15:39,243 - my_logger - INFO - This is a log message.
+2024-05-23 16:15:39,243 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 16:15:39,311 - my_logger - INFO - Using Grid Search
+2024-05-23 16:21:29,789 - my_logger - INFO - Best Parameters: {'kernel': 'linear', 'gamma': 'scale', 'epsilon': 100, 'degree': 4, 'C': 10}
+2024-05-23 16:21:33,042 - my_logger - INFO - Train Score: -45821110.537658654
+2024-05-23 16:21:33,920 - my_logger - INFO - Test Score: -45851087.220236965
+2024-05-23 16:21:34,785 - my_logger - INFO - matrix summary: {'MAE': 3283.8579324641873, 'MSE': 45851087.220236965, 'RMSE': 6771.343088356767, 'MAPE': 18.59450171767783}
+2024-05-23 16:21:34,806 - my_logger - INFO - End time: 1716474094.8068466
+2024-05-23 16:21:34,808 - my_logger - INFO - Elapsed time: 355.5628979206085
+2024-05-23 16:21:34,808 - my_logger - INFO - Finished
+2024-05-23 16:21:34,808 - my_logger - INFO - ---------------------------------------------------
+2024-05-23 16:21:39,758 - my_logger - INFO - This is a log message.
+2024-05-23 16:21:39,758 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 16:21:39,832 - my_logger - INFO - Using Grid Search
+2024-05-23 16:23:02,392 - my_logger - INFO - This is a log message.
+2024-05-23 16:23:02,399 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 16:23:02,471 - my_logger - INFO - Using Grid Search
+2024-05-23 16:28:26,069 - my_logger - INFO - Best Parameters: {'kernel': 'linear', 'gamma': 'auto', 'epsilon': 10, 'degree': 3, 'C': 100}
+2024-05-23 16:28:29,844 - my_logger - INFO - Train Score: -44356166.42994473
+2024-05-23 16:28:30,725 - my_logger - INFO - Test Score: -44380723.23462385
+2024-05-23 16:28:31,704 - my_logger - INFO - matrix summary: {'MAE': 3278.6169340017186, 'MSE': 44380723.23462385, 'RMSE': 6661.885861722929, 'MAPE': 18.889841974093756}
+2024-05-23 16:28:31,710 - my_logger - INFO - End time: 1716474511.7108946
+2024-05-23 16:28:31,710 - my_logger - INFO - Elapsed time: 329.3183856010437
+2024-05-23 16:28:31,710 - my_logger - INFO - Finished
+2024-05-23 16:28:31,710 - my_logger - INFO - ---------------------------------------------------
+2024-05-23 16:34:38,307 - my_logger - INFO - This is a log message.
+2024-05-23 16:34:38,307 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 16:34:38,375 - my_logger - INFO - Using Grid Search
+2024-05-23 16:39:14,605 - my_logger - INFO - Best Parameters: {'kernel': 'linear', 'gamma': 'scale', 'epsilon': 100, 'degree': 4, 'C': 10}
+2024-05-23 16:39:16,727 - my_logger - INFO - Train Score: -46025152.5832554
+2024-05-23 16:39:17,431 - my_logger - INFO - Test Score: -45132688.02742194
+2024-05-23 16:39:18,148 - my_logger - INFO - matrix summary: {'MAE': 3268.309588607479, 'MSE': 45132688.02742194, 'RMSE': 6718.0866344087835, 'MAPE': 18.524654353489684}
+2024-05-23 16:39:18,156 - my_logger - INFO - End time: 1716475158.1568396
+2024-05-23 16:39:18,156 - my_logger - INFO - Elapsed time: 279.85005354881287
+2024-05-23 16:39:18,156 - my_logger - INFO - Finished
+2024-05-23 16:39:18,156 - my_logger - INFO - ---------------------------------------------------
+2024-05-23 16:47:01,656 - my_logger - INFO - This is a log message.
+2024-05-23 16:47:01,656 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 16:47:01,698 - my_logger - INFO - Using Grid Search
+2024-05-23 16:50:38,905 - my_logger - INFO - Best Parameters: {'kernel': 'linear', 'gamma': 'auto', 'epsilon': 10, 'degree': 4, 'C': 100}
+2024-05-23 16:50:41,240 - my_logger - INFO - Train Score: -44440558.789966054
+2024-05-23 16:50:42,015 - my_logger - INFO - Test Score: -43572467.88565431
+2024-05-23 16:50:42,789 - my_logger - INFO - matrix summary: {'MAE': 3264.0102857498273, 'MSE': 43572467.88565431, 'RMSE': 6600.944469214562, 'MAPE': 18.855317809514546}
+2024-05-23 16:50:42,797 - my_logger - INFO - End time: 1716475842.7976868
+2024-05-23 16:50:42,797 - my_logger - INFO - Elapsed time: 221.1416256427765
+2024-05-23 16:50:42,797 - my_logger - INFO - Finished
+2024-05-23 16:50:42,797 - my_logger - INFO - ---------------------------------------------------
+2024-05-23 16:58:19,416 - my_logger - INFO - This is a log message.
+2024-05-23 16:58:19,416 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 16:58:19,464 - my_logger - INFO - Using RFE
+2024-05-23 16:58:19,464 - my_logger - INFO - Using Grid Search
+2024-05-23 17:00:30,391 - my_logger - INFO - This is a log message.
+2024-05-23 17:00:30,391 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 17:00:30,440 - my_logger - INFO - Using RFE
+2024-05-23 17:00:30,440 - my_logger - INFO - Using Grid Search
+2024-05-23 17:02:06,146 - my_logger - INFO - This is a log message.
+2024-05-23 17:02:06,146 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 17:02:06,200 - my_logger - INFO - Using Grid Search
+2024-05-23 17:05:57,235 - my_logger - INFO - Best Parameters: {'kernel': 'sigmoid', 'gamma': 'scale', 'epsilon': 100, 'degree': 2, 'C': 100}
+2024-05-23 17:06:01,617 - my_logger - INFO - Train Score: -59975461.7409073
+2024-05-23 17:06:03,075 - my_logger - INFO - Test Score: -57760099.97249675
+2024-05-23 17:06:04,527 - my_logger - INFO - matrix summary: {'MAE': 4569.847567213053, 'MSE': 57760099.97249675, 'RMSE': 7600.006577135098, 'MAPE': 41.766979317028756}
+2024-05-23 17:06:04,535 - my_logger - INFO - End time: 1716476764.5353808
+2024-05-23 17:06:04,535 - my_logger - INFO - Elapsed time: 238.3893392086029
+2024-05-23 17:06:04,535 - my_logger - INFO - Finished
+2024-05-23 17:06:04,535 - my_logger - INFO - ---------------------------------------------------
+2024-05-23 17:06:07,246 - my_logger - INFO - This is a log message.
+2024-05-23 17:06:07,246 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 17:06:07,287 - my_logger - INFO - Using Grid Search
+2024-05-23 17:09:58,580 - my_logger - INFO - Best Parameters: {'kernel': 'linear', 'gamma': 'scale', 'epsilon': 100, 'degree': 4, 'C': 100}
+2024-05-23 17:10:01,088 - my_logger - INFO - Train Score: -44448588.932303295
+2024-05-23 17:10:01,805 - my_logger - INFO - Test Score: -43581868.21335
+2024-05-23 17:10:02,560 - my_logger - INFO - matrix summary: {'MAE': 3264.259257573364, 'MSE': 43581868.21335, 'RMSE': 6601.65647495763, 'MAPE': 18.856132983242098}
+2024-05-23 17:10:02,568 - my_logger - INFO - End time: 1716477002.568236
+2024-05-23 17:10:02,568 - my_logger - INFO - Elapsed time: 235.3219509124756
+2024-05-23 17:10:02,568 - my_logger - INFO - Finished
+2024-05-23 17:10:02,568 - my_logger - INFO - ---------------------------------------------------
+2024-05-23 17:12:09,876 - my_logger - INFO - This is a log message.
+2024-05-23 17:12:09,876 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 17:12:09,925 - my_logger - INFO - Using Grid Search
+2024-05-23 17:16:15,799 - my_logger - INFO - Best Parameters: {'kernel': 'linear', 'gamma': 'auto', 'epsilon': 100, 'degree': 4, 'C': 100}
+2024-05-23 17:16:19,528 - my_logger - INFO - Train Score: -44448588.932303295
+2024-05-23 17:16:20,844 - my_logger - INFO - Test Score: -43581868.21335
+2024-05-23 17:16:22,034 - my_logger - INFO - matrix summary: {'MAE': 3264.259257573364, 'MSE': 43581868.21335, 'RMSE': 6601.65647495763, 'MAPE': 18.856132983242098}
+2024-05-23 17:16:22,042 - my_logger - INFO - End time: 1716477382.042576
+2024-05-23 17:16:22,042 - my_logger - INFO - Elapsed time: 252.1659288406372
+2024-05-23 17:16:22,042 - my_logger - INFO - Finished
+2024-05-23 17:16:22,042 - my_logger - INFO - ---------------------------------------------------
+2024-05-23 17:16:24,876 - my_logger - INFO - This is a log message.
+2024-05-23 17:16:24,876 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 17:16:24,917 - my_logger - INFO - Using Grid Search
+2024-05-23 17:19:51,749 - my_logger - INFO - Best Parameters: {'kernel': 'linear', 'gamma': 'scale', 'epsilon': 100, 'degree': 2, 'C': 100}
+2024-05-23 17:19:53,902 - my_logger - INFO - Train Score: -44448588.932303295
+2024-05-23 17:19:54,615 - my_logger - INFO - Test Score: -43581868.21335
+2024-05-23 17:19:55,333 - my_logger - INFO - matrix summary: {'MAE': 3264.259257573364, 'MSE': 43581868.21335, 'RMSE': 6601.65647495763, 'MAPE': 18.856132983242098}
+2024-05-23 17:19:55,341 - my_logger - INFO - End time: 1716477595.341282
+2024-05-23 17:19:55,341 - my_logger - INFO - Elapsed time: 210.464825630188
+2024-05-23 17:19:55,341 - my_logger - INFO - Finished
+2024-05-23 17:19:55,341 - my_logger - INFO - ---------------------------------------------------
+2024-05-23 19:07:27,412 - my_logger - INFO - This is a log message.
+2024-05-23 19:07:27,412 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 19:07:57,645 - my_logger - INFO - This is a log message.
+2024-05-23 19:07:57,645 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 19:08:16,204 - my_logger - INFO - This is a log message.
+2024-05-23 19:08:16,204 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 19:08:24,238 - my_logger - INFO - This is a log message.
+2024-05-23 19:08:24,238 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 19:08:48,576 - my_logger - INFO - This is a log message.
+2024-05-23 19:08:48,576 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 19:09:08,159 - my_logger - INFO - This is a log message.
+2024-05-23 19:09:08,159 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 19:09:32,597 - my_logger - INFO - This is a log message.
+2024-05-23 19:09:32,597 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 19:09:32,654 - my_logger - INFO - Using Grid Search
+2024-05-23 19:12:24,682 - my_logger - INFO - with job id no city
+2024-05-23 19:13:43,754 - my_logger - INFO - Best Parameters: {'kernel': 'linear', 'gamma': 'auto', 'epsilon': 10, 'degree': 4, 'C': 100}
+2024-05-23 19:13:46,155 - my_logger - INFO - Train Score: -44324658.1869174
+2024-05-23 19:13:46,953 - my_logger - INFO - Test Score: -43481195.82819444
+2024-05-23 19:13:47,755 - my_logger - INFO - matrix summary: {'MAE': 3259.935402001929, 'MSE': 43481195.82819444, 'RMSE': 6594.027284459356, 'MAPE': 18.73426807628044}
+2024-05-23 19:13:47,764 - my_logger - INFO - End time: 1716484427.7632189
+2024-05-23 19:13:47,764 - my_logger - INFO - Elapsed time: 255.16616654396057
+2024-05-23 19:13:47,764 - my_logger - INFO - Finished
+2024-05-23 19:13:47,764 - my_logger - INFO - ---------------------------------------------------
+2024-05-23 19:13:50,560 - my_logger - INFO - This is a log message.
+2024-05-23 19:13:50,560 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 19:13:50,606 - my_logger - INFO - Using Grid Search
+2024-05-23 19:17:52,249 - my_logger - INFO - Best Parameters: {'kernel': 'linear', 'gamma': 'auto', 'epsilon': 10, 'degree': 3, 'C': 100}
+2024-05-23 19:17:54,812 - my_logger - INFO - Train Score: -44324658.1869174
+2024-05-23 19:17:55,632 - my_logger - INFO - Test Score: -43481195.82819444
+2024-05-23 19:17:56,472 - my_logger - INFO - matrix summary: {'MAE': 3259.935402001929, 'MSE': 43481195.82819444, 'RMSE': 6594.027284459356, 'MAPE': 18.73426807628044}
+2024-05-23 19:17:56,480 - my_logger - INFO - End time: 1716484676.480635
+2024-05-23 19:17:56,481 - my_logger - INFO - Elapsed time: 245.92167234420776
+2024-05-23 19:17:56,481 - my_logger - INFO - Finished
+2024-05-23 19:17:56,481 - my_logger - INFO - ---------------------------------------------------
+2024-05-23 19:26:25,895 - my_logger - INFO - This is a log message.
+2024-05-23 19:26:25,895 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 19:27:13,480 - my_logger - INFO - This is a log message.
+2024-05-23 19:27:13,480 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 19:27:28,367 - my_logger - INFO - Using Grid Search
+2024-05-23 19:31:05,107 - my_logger - INFO - Best Parameters: {'kernel': 'linear', 'gamma': 'auto', 'epsilon': 10, 'degree': 3, 'C': 100}
+2024-05-23 19:31:07,491 - my_logger - INFO - Train Score: -44324658.1869174
+2024-05-23 19:31:08,289 - my_logger - INFO - Test Score: -43481195.82819444
+2024-05-23 19:31:09,091 - my_logger - INFO - matrix summary: {'MAE': 3259.935402001929, 'MSE': 43481195.82819444, 'RMSE': 6594.027284459356, 'MAPE': 18.73426807628044}
+2024-05-23 19:31:09,098 - my_logger - INFO - End time: 1716485469.0985305
+2024-05-23 19:31:09,099 - my_logger - INFO - Elapsed time: 235.61776542663574
+2024-05-23 19:31:09,099 - my_logger - INFO - Finished
+2024-05-23 19:31:09,099 - my_logger - INFO - ---------------------------------------------------
+2024-05-23 19:53:27,791 - my_logger - INFO - This is a log message.
+2024-05-23 19:53:27,791 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 19:53:34,203 - my_logger - INFO - Using Grid Search
+2024-05-23 19:57:03,702 - my_logger - INFO - Best Parameters: {'kernel': 'linear', 'gamma': 'auto', 'epsilon': 10, 'degree': 3, 'C': 100}
+2024-05-23 19:57:06,308 - my_logger - INFO - Train Score: -44440558.789966054
+2024-05-23 19:57:07,155 - my_logger - INFO - Test Score: -43572467.88565431
+2024-05-23 19:57:07,990 - my_logger - INFO - matrix summary: {'MAE': 3264.0102857498273, 'MSE': 43572467.88565431, 'RMSE': 6600.944469214562, 'MAPE': 18.855317809514546}
+2024-05-23 19:57:07,997 - my_logger - INFO - End time: 1716487027.9972332
+2024-05-23 19:57:07,998 - my_logger - INFO - Elapsed time: 220.20665287971497
+2024-05-23 19:57:07,998 - my_logger - INFO - Finished
+2024-05-23 19:57:07,998 - my_logger - INFO - ---------------------------------------------------
+2024-05-23 19:59:22,853 - my_logger - INFO - This is a log message.
+2024-05-23 19:59:22,853 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 19:59:31,710 - my_logger - INFO - Using Grid Search
+2024-05-23 20:03:40,638 - my_logger - INFO - Best Parameters: {'kernel': 'sigmoid', 'gamma': 'scale', 'epsilon': 100, 'degree': 3, 'C': 100}
+2024-05-23 20:03:45,622 - my_logger - INFO - Train Score: -59975461.7409073
+2024-05-23 20:03:47,349 - my_logger - INFO - Test Score: -57760099.97249675
+2024-05-23 20:03:49,309 - my_logger - INFO - matrix summary: {'MAE': 4569.847567213053, 'MSE': 57760099.97249675, 'RMSE': 7600.006577135098, 'MAPE': 41.766979317028756}
+2024-05-23 20:03:49,317 - my_logger - INFO - End time: 1716487429.3176374
+2024-05-23 20:03:49,317 - my_logger - INFO - Elapsed time: 266.46538639068604
+2024-05-23 20:03:49,317 - my_logger - INFO - Finished
+2024-05-23 20:03:49,318 - my_logger - INFO - ---------------------------------------------------
+2024-05-23 20:18:32,128 - my_logger - INFO - This is a log message.
+2024-05-23 20:18:32,128 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 20:19:10,557 - my_logger - INFO - This is a log message.
+2024-05-23 20:19:10,557 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 20:19:41,725 - my_logger - INFO - This is a log message.
+2024-05-23 20:19:41,725 - my_logger - INFO - Calling function main with args () and kwargs {}
+2024-05-23 20:19:48,089 - my_logger - INFO - Using Grid Search
+2024-05-23 20:23:31,943 - my_logger - INFO - Best Parameters: {'kernel': 'linear', 'gamma': 'scale', 'epsilon': 100, 'degree': 4, 'C': 100}
+2024-05-23 20:23:34,452 - my_logger - INFO - Train Score: -44445506.88085323
+2024-05-23 20:23:35,293 - my_logger - INFO - Test Score: -43578728.27587367
+2024-05-23 20:23:36,088 - my_logger - INFO - matrix summary: {'MAE': 3264.286926627418, 'MSE': 43578728.27587367, 'RMSE': 6601.418656309693, 'MAPE': 18.857298943755435}
+2024-05-23 20:23:36,097 - my_logger - INFO - End time: 1716488616.0972748
+2024-05-23 20:23:36,097 - my_logger - INFO - Elapsed time: 234.37218689918518
+2024-05-23 20:23:36,097 - my_logger - INFO - Finished
+2024-05-23 20:23:36,097 - my_logger - INFO - ---------------------------------------------------

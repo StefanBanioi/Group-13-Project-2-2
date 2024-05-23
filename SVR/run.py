@@ -2,6 +2,7 @@ import argparse
 import numpy as np
 import json
 import joblib
+from sklearn.calibration import LabelEncoder
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.datasets import make_regression
 from sklearn.model_selection import train_test_split
@@ -60,13 +61,13 @@ def log_args(func):
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Run a machine learning model with optional RFE and Grid Search.')
     parser.add_argument('--use_rfe', type=int, default=False, help='Use Recursive Feature Elimination (RFE)')
-    parser.add_argument('--use_grid_search', type=int, default=False, help='Use Grid Search')
+    parser.add_argument('--use_grid_search', type=int, default=True, help='Use Grid Search')
     param_grid = {
-        'm__C': [1, 10, 100],
-        'm__epsilon': [ 10,100],
-        'm__kernel': ['linear', 'poly', 'rbf', 'sigmoid'],
-        'm__degree': [2, 3, 4],
-        'm__gamma': ['scale', 'auto']
+        'C': [1, 10, 100],
+        'epsilon': [ 10,100],
+        'kernel': ['linear', 'poly', 'rbf', 'sigmoid'],
+        'degree': [2, 3, 4],
+        'gamma': ['scale', 'auto']
     }
     parser.add_argument('--param_grid', type=dict, default=param_grid, help='Parameter grid for Grid Search')
     return parser.parse_args()
@@ -74,14 +75,20 @@ def parse_arguments():
 def main():
     args = parse_arguments()
     param_grid = args.param_grid
-    df = pd.read_csv('Data\dataset.csv')
+    df = pd.read_csv("Data\dataset (2).csv")
     # drop mising values
     df = df.dropna()
-    df = df.drop('city',axis=1)
+    comment = input("Please enter a comment to add to the log: ")
+    logging.info(f"User comment : {comment}")
+    le = LabelEncoder()
+    df['city'] = le.fit_transform(df['city'])   
+    #df = df.drop('city',axis=1)
     df = df.drop('job_title',axis=1)
+    #df= df.drop('hereditary_diseases',axis=1)
+
     X=df.drop('claim',axis=1)
     y=df['claim']
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=69)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=69)
     scaler = StandardScaler()
     scaler.fit(X_train)
     X_train = scaler.transform(X_train)
@@ -92,7 +99,7 @@ def main():
     pipeline = Pipeline(steps=[('s',rfecv),('m',svr)])
     selector = RFE(estimator, n_features_to_select=5, step=1)
     grid_search = RandomizedSearchCV(pipeline, param_distributions=param_grid, random_state=69,
-                                     n_iter=100, cv=2, scoring='neg_mean_squared_error', n_jobs=-1, verbose=3, refit=False,)
+                                     n_iter=300, cv=5, scoring='neg_mean_squared_error', n_jobs=-1, verbose=3, refit=False,)
     if args.use_rfe:
         logger.info("Using RFE")
         if args.use_grid_search:
