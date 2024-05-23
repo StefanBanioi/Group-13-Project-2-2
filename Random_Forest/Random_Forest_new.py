@@ -66,7 +66,20 @@ PP_rf = model.fit(X_train_scaled, y_train)
 # ultima ultima Best Parameters: {'n_estimators': 800, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_depth': 80, 'bootstrap': True}
 # ultima Best Parameters: {'n_estimators': 1650, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_depth': 25, 'bootstrap': True}
 # Best Parameters: {'n_estimators': 1700, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_depth': 105, 'bootstrap': True}
+# Parameters found by the RandomizedSearchCV below. 
+'''
+# Instantiation of the model
+rand_search = RandomizedSearchCV(
+    RandomForestRegressor(random_state=20),
+    param_distributions=param_dist,
+    n_iter=1,  # Set the number of iterations to 1
+    cv=5
+)
+rand_search.fit(X_train_scaled, y_train)
 
+best_params = rand_search.best_params_
+print("Best Parameters:", best_params)
+'''
 
 # In[6]:
 
