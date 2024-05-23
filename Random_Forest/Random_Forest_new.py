@@ -138,23 +138,6 @@ plt.show()
 
 # In[ ]:
 def predict_premium(params):
-    param_dist = {'bootstrap': [True, False],
-    'max_depth': list(range(10, 110, 10)) + [None],   #range(start, stop, step) + [None] adds None to the list of values to be tested for max_depth
-    'min_samples_leaf': list(range(1, 5)),
-    'min_samples_split': list(range(2, 11, 3)),
-    'n_estimators': list(range(200, 2100, 200))}
-    # Instantiation of the model
-    rand_search = RandomizedSearchCV(
-    RandomForestRegressor(random_state=20),
-    param_distributions=param_dist, n_iter=1,  # Set the number of iterations to 1
-    cv=5)
-    rand_search.fit(X_train_scaled, y_train)
-
-    best_params = rand_search.best_params_
-    print("Best Parameters:", best_params)
-
-    # Predictions using the best model
-    best_model = rand_search.best_estimator_
   
     """
     This function takes a list of parameters representing a person's medical information
@@ -175,7 +158,7 @@ def predict_premium(params):
     X_new_scaled = scaler.transform(X_new)
 
     # Make prediction using the trained Random Forest model
-    predicted_price = best_model.predict(X_new_scaled)[0]
+    predicted_price = PP_rf.predict(X_new_scaled)[0]
 
     return predicted_price
 
