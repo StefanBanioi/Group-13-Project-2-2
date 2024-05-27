@@ -55,7 +55,7 @@ def calculate_summary(y_true, y_pred):
 
 def main():
     # Load the dataset
-    df = pd.read_csv('dataset.csv')
+    df = pd.read_csv('Data\dataset.csv')
     # drop missing values
     df = df.dropna()
     df = df.drop('city',axis=1)
