@@ -21,8 +21,8 @@ class Backend:
             return 'No of Dependents must be a number'
         if smoker.lower() not in ['yes', 'no']:
             return 'Smoker is misspelled or not a string (accepts only: Yes or No, no numbers and case non-sensitive)'
-        if blood_pressure.lower() not in ['yes', 'no']:
-            return 'Blood pressure problem is misspelled or not a string (accepts only: Yes or No, no numbers and case non-sensitive)'
+        if blood_pressure.isdigit() == False:
+            return 'Blood pressure problem is misspelled or not a value (accepts only: numbers)'
         if diabetes.lower() not in ['yes', 'no']:
             return 'Diabetes is misspelled or not a string (accepts only: Yes or No, no numbers and case non-sensitive)'
         if regular_exercise.lower() not in ['yes', 'no']:
@@ -36,7 +36,7 @@ class Backend:
         hereditary_diseases = 0 if hereditary_diseases == 'NoDisease' else 1 if hereditary_diseases == 'Arthritis' else 2 if hereditary_diseases == 'Alzheimer' else 3 if hereditary_diseases == 'Diabetes' else 4 if hereditary_diseases == 'Cancer' else 5 if hereditary_diseases == 'EyeDisease' else 6 if hereditary_diseases == 'Obesity' else 7 if hereditary_diseases == 'High BP' else 8 if hereditary_diseases == 'HeartDisease' else 9 
         sex = 1 if sex.lower() == 'male' else 0
         smoker = 1 if smoker.lower() == 'yes' else 0
-        blood_pressure = 1 if blood_pressure.lower() == 'yes' else 0
+        blood_pressure = int(blood_pressure)
         diabetes = 1 if diabetes.lower() == 'yes' else 0
         regular_exercise = 1 if regular_exercise.lower() == 'yes' else 0
         age = int(age)

@@ -90,7 +90,7 @@ class Frontend:
         label.grid(row=6, column=0, sticky="w", pady=5)
 
         #Blood Pressure
-        label = tk.Label(self.frame_labels, text="Blood Pressure (Yes/No)", font=("Helvetica", 12))
+        label = tk.Label(self.frame_labels, text="Blood Pressure (Value)", font=("Helvetica", 12))
         label.grid(row=7, column=0, sticky="w", pady=5)
 
         #Diabetes
