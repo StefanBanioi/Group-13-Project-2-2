@@ -24,7 +24,7 @@ mydata.describe()
 #X.shape
 
 # Load the CSV file into a DataFrame
-df = pd.read_csv('Random_Forest\healthinsurance2.csv')
+df = pd.read_csv('Data\healthinsurance2.csv')
 
 # Get the unique city and count them
 unique_city = df['city'].unique()

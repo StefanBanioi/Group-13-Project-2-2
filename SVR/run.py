@@ -75,7 +75,7 @@ def parse_arguments():
 def main():
     args = parse_arguments()
     param_grid = args.param_grid
-    df = pd.read_csv("Data\dataset (2).csv")
+    df = pd.read_csv("Data\healthinsurance2.csv")
     # drop mising values
     df = df.dropna()
     #=========experiment=================#

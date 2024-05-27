@@ -4,7 +4,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, mean_absolu
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingRegressor
 
-dataset = pd.read_csv('healthinsurance2.csv')
+dataset = pd.read_csv('Data\healthinsurance2.csv')
 dataset = dataset.dropna()
 
 dataset = dataset.drop(columns=['city', 'job_title'])
