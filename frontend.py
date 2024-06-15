@@ -1,5 +1,14 @@
 import tkinter as tk
 from adapter import Adapter
+import xgboost as xgb
+import pandas as pd
+import numpy as np
+loaded_model = xgb.XGBRegressor()
+loaded_model.load_model('xgboost_model.json')
+import shap
+import numpy as np
+import pandas as pd
+shap.initjs()
 
 # Frontend class
 class Frontend:
@@ -164,11 +173,11 @@ class Frontend:
         entry = tk.Entry(self.frame_entries, width=20, font=("Helvetica", 12))
         entry.grid(row=9, column=0, pady=5)
         self.entries.append(entry)
-    
+        '''
         self.entries.append(entry)
         self.button_send = tk.Button(self.root, text="Send", command=self.send_data, font=("Helvetica", 15))
         self.button_send.grid(row=2, column=0, pady=10)
-
+        '''
         self.button_calc = tk.Button(self.root, text="Calculate", command=self.calculate_data, font=("Helvetica", 15))
         self.button_calc.grid(row=2, columnspan=2, pady=15)
 
@@ -197,26 +206,104 @@ class Frontend:
     '''
 
     def send_data(self):
+        
     # Get the data from the entry widget and send it to the adapter
         age = self.entries[0].get()
         sex = self.entries[1].get()
         weight = self.entries[2].get()
         bmi = self.entries[3].get()
-        hereditary_disease = self.disease_var.get()
+        hereditary_diseases = self.disease_var.get()
         no_of_dependents = self.entries[4].get()
         smoker = self.entries[5].get()
         blood_pressure = self.entries[6].get()
         diabetes = self.entries[7].get()
         regular_exercise = self.entries[8].get()
+        response = self.adapter.request(age, sex, weight, bmi, hereditary_diseases, no_of_dependents, smoker, blood_pressure, diabetes, regular_exercise)
+        
+        age = response[0]
+        sex = response[1]
+        weight = response[2]
+        bmi = response[3]
+        hereditary_diseases = response[4]
+        no_of_dependents = response[5]
+        smoker = response[6]    
+        blood_pressure = response[7]
+        diabetes = response[8]
+        regular_exercise = response[9]
+    
+        # Your instance as a NumPy array
+        X = np.array([age, sex, weight, bmi, hereditary_diseases, no_of_dependents, smoker, blood_pressure, diabetes, regular_exercise])
+        X = X.reshape(1, -1)
 
-        response = self.adapter.request(age, sex, weight, bmi, hereditary_disease, no_of_dependents, smoker, blood_pressure, diabetes, regular_exercise)
+        # Define your feature names
+        feature_names = ['age', 'sex', 'weight', 'bmi', 'hereditary_diseases', 'no_of_dependents', 'smoker', 'bloodpressure', 'diabetes', 'regular_ex']
+        
+        # Convert your instance into a pandas DataFrame
+        df = pd.DataFrame(X, columns=feature_names)
+
+        # Initialize JavaScript visualization code for SHAP
+        shap.initjs()
+
+        # Calculate SHAP values
+        explainer = shap.TreeExplainer(loaded_model)
+        shap_values = explainer.shap_values(df)
+
+        # Create a SHAP Explanation object
+        shap_values_explanation = shap.Explanation(values=shap_values, base_values=explainer.expected_value, data=df)
+
+        # Create a waterfall plot
+        shap.plots.waterfall(shap_values_explanation[0])
+        
+    
         print(response)
         return response
+     
+    
+    def calculate_shap_values(self):
+        # Use self.adapter.request to get user inputs
+        response = self.adapter.request(age, sex, weight, bmi, hereditary_diseases, no_of_dependents, smoker, blood_pressure, diabetes, regular_exercise)
+        print ("responses for the shap values: " + response)
+        age = response[0]
+        sex = response[1]
+        weight = response[2]
+        bmi = response[3]
+        hereditary_diseases = response[4]
+        no_of_dependents = response[5]
+        smoker = response[6]
+        blood_pressure = response[7]
+        diabetes = response[8]
+        regular_exercise = response[9]
+    
+        # Your instance as a NumPy array
+        X = np.array([age, sex, weight, bmi, hereditary_diseases, no_of_dependents, smoker, blood_pressure, diabetes, regular_exercise])
+        X = X.reshape(1, -1)
+
+        # Define your feature names
+        feature_names = ['age', 'sex', 'weight', 'bmi', 'hereditary_diseases', 'no_of_dependents', 'smoker', 'bloodpressure', 'diabetes', 'regular_ex']
+        
+        # Convert your instance into a pandas DataFrame
+        df = pd.DataFrame(X, columns=feature_names)
+
+        # Initialize JavaScript visualization code for SHAP
+        shap.initjs()
+
+        # Calculate SHAP values
+        explainer = shap.TreeExplainer(loaded_model)
+        shap_values = explainer.shap_values(df)
+
+        # Create a SHAP Explanation object
+        shap_values_explanation = shap.Explanation(values=shap_values, base_values=explainer.expected_value, data=df)
+
+        # Create a waterfall plot
+        shap.plots.waterfall(shap_values_explanation[0])
+
+
     
     def calculate_data(self):
 
         result = self.adapter.calculate_data(self.send_data())
-                
+        #calculate_shap_values(self)
+        #self.calculate_shap_values()
         # Clear the text box
         self.result_text.config(state="normal")
         self.result_text.delete('1.0', tk.END)
@@ -229,7 +316,9 @@ class Frontend:
         self.result_text.config(state="disabled")
         print('test')
         
+        
         return result
+
 
     def run(self):
         self.root.mainloop()
