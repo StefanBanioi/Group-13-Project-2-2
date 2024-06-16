@@ -257,57 +257,14 @@ class Frontend:
     
         print(response)
         return response
-     
-    
-    def calculate_shap_values(self):
-        # Use self.adapter.request to get user inputs
-        response = self.adapter.request(age, sex, weight, bmi, hereditary_diseases, no_of_dependents, smoker, blood_pressure, diabetes, regular_exercise)
-        print ("responses for the shap values: " + response)
-        age = response[0]
-        sex = response[1]
-        weight = response[2]
-        bmi = response[3]
-        hereditary_diseases = response[4]
-        no_of_dependents = response[5]
-        smoker = response[6]
-        blood_pressure = response[7]
-        diabetes = response[8]
-        regular_exercise = response[9]
-    
-        # Your instance as a NumPy array
-        X = np.array([age, sex, weight, bmi, hereditary_diseases, no_of_dependents, smoker, blood_pressure, diabetes, regular_exercise])
-        X = X.reshape(1, -1)
-
-        # Define your feature names
-        feature_names = ['age', 'sex', 'weight', 'bmi', 'hereditary_diseases', 'no_of_dependents', 'smoker', 'bloodpressure', 'diabetes', 'regular_ex']
-        
-        # Convert your instance into a pandas DataFrame
-        df = pd.DataFrame(X, columns=feature_names)
-
-        # Initialize JavaScript visualization code for SHAP
-        shap.initjs()
-
-        # Calculate SHAP values
-        explainer = shap.TreeExplainer(loaded_model)
-        shap_values = explainer.shap_values(df)
-
-        # Create a SHAP Explanation object
-        shap_values_explanation = shap.Explanation(values=shap_values, base_values=explainer.expected_value, data=df)
-
-        # Create a waterfall plot
-        shap.plots.waterfall(shap_values_explanation[0])
-
-
-    
+         
     def calculate_data(self):
 
         result = self.adapter.calculate_data(self.send_data())
-        #calculate_shap_values(self)
-        #self.calculate_shap_values()
+        
         # Clear the text box
         self.result_text.config(state="normal")
         self.result_text.delete('1.0', tk.END)
-
 
         # Insert the new value
         self.result_text.insert(tk.END, str(result))
@@ -315,7 +272,6 @@ class Frontend:
          # Disable the text box so it's read-only
         self.result_text.config(state="disabled")
         print('test')
-        
         
         return result
 

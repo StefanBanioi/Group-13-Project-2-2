@@ -69,6 +69,7 @@ class Backend:
         # To do: Use the Random Forest model to calculate the premium
         #        Make that the Random Forest generated 5 aproximations and then takes the average as the result of the premium and this gets returned
         #        We do this since each time RF is runned, a different result is generated so we take an average of 5 results to get a more accurate result
+        
         result = xgb.predict_premium(data)
        # result = rf.predict_premium(data)
         print('test2')
