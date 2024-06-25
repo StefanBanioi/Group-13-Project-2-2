@@ -271,7 +271,7 @@ class Frontend:
 
          # Disable the text box so it's read-only
         self.result_text.config(state="disabled")
-        print('test')
+        print('test test')
         
         return result
 
