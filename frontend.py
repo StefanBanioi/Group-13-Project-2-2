@@ -7,6 +7,7 @@ loaded_model = xgb.XGBRegressor()
 loaded_model.load_model('xgboost_model.json')
 import shap
 import numpy as np
+import	joblib
 import pandas as pd
 shap.initjs()
 
@@ -246,7 +247,12 @@ class Frontend:
 
         # Calculate SHAP values
         explainer = shap.TreeExplainer(loaded_model)
-        shap_values = explainer.shap_values(df)
+        #load scaler.joblib
+
+        scaler = joblib.load('scaler.joblib')
+        df_scaled = scaler.transform(df)
+
+        shap_values = explainer.shap_values(df_scaled)
 
         # Create a SHAP Explanation object
         shap_values_explanation = shap.Explanation(values=shap_values, base_values=explainer.expected_value, data=df)
